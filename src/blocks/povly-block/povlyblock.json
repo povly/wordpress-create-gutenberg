@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json.schemastore.org/block.json",
+  "apiVersion": 2,
+  "name": "povly-block/test-block",
+  "version": "0.1.0",
+  "title": "Povly Block Test",
+  "category": "povly",
+  "icon": "smiley",
+  "description": "My first block. Hello World",
+  "supports": {
+	"html": false
+  },
+  "textdomain": "povly-block",
+  "editorScript": "file:./build/index.js",
+  "editorStyle": "file:./build/index.css",
+  "style": "file:./build/style-index.css"
+}

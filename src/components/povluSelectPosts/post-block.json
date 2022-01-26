@@ -1,0 +1,35 @@
+{
+  "name": "povly-block/post",
+  "title": "Post Block",
+  "category": "povly",
+  "icon": "smiley",
+  "description": "Post block",
+  "supports": {
+	"html": false
+  },
+  "attributes": {
+	"content": {
+	  "type": "array",
+	  "source": "children",
+	  "selector": "p"
+	},
+	"title": {
+	  "type": "string",
+	  "source": "html",
+	  "selector": "h2"
+	},
+	"link": {
+	  "type": "string",
+	  "source": "html",
+	  "selector": "a"
+	},
+	"selectedPost": {
+	  "type": "number",
+	  "default": 0
+	}
+  },
+  "textdomain": "povly-block",
+  "editorScript": "file:./build/index.js",
+  "editorStyle": "file:./build/index.css",
+  "style": "file:./build/style-index.css"
+}
