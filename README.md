@@ -10,3 +10,5 @@
 [Документация Gutenberg по готовым компонентам для редактора - боковая панель, сайдбар](https://github.com/WordPress/gutenberg/tree/8ba8c6d8ec69f9239af32f9a47c0d00ef70eef5e/packages/components/src)
 
 [Документация Gutenberg](https://github.com/WordPress/gutenberg)
+
+остальное все смотрите в папке packages - если нужно допустим переводчик то i18n, если fetch чтобы получить запрос то api-fetch и так далее
