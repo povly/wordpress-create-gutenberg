@@ -25,4 +25,5 @@ function create_block_povly_block_block_init() {
 }
 add_action( 'init', 'create_block_povly_block_block_init' );
 
-
+// add filters
+require_once __DIR__ . '/inc/filters.php';
