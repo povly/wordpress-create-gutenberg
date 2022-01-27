@@ -14,7 +14,6 @@ export default function Edit() {
 		<div {...useBlockProps()}>
 			<InnerBlocks
 				template={MY_TEMPLATE}
-				allowedBlocks={["povly-block/social-row"]}
 			/>
 		</div>
 	);

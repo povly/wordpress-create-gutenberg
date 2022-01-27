@@ -21,8 +21,7 @@
  * @see https://developer.wordpress.org/block-editor/how-to-guides/block-tutorial/writing-your-first-block-type/
  */
 function create_block_povly_block_block_init() {
-	register_block_type( __DIR__ );
-
+	register_block_type( __DIR__ . '\src\blocks\povly-block' );
 }
 add_action( 'init', 'create_block_povly_block_block_init' );
 

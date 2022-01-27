@@ -25,7 +25,7 @@ import './components/povluSelectPosts/povluSelectPosts';
 
 import povlyBlockEdit from './blocks/povly-block/edit';
 import povlyBlockSave from './blocks/povly-block/save';
-import povlyBlockMetadata from './blocks/povly-block/povlyblock.json';
+import povlyBlockMetadata from './blocks/povly-block/block.json';
 
 registerBlockType(povlyBlockMetadata, {
 	edit: povlyBlockEdit,
