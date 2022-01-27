@@ -25,20 +25,4 @@ function create_block_povly_block_block_init() {
 }
 add_action( 'init', 'create_block_povly_block_block_init' );
 
-function filter_block_categories_when_post_provided( $block_categories, $editor_context ) {
-	if ( ! empty( $editor_context->post ) ) {
-		array_push(
-			$block_categories,
-			array(
-				'slug'  => 'povly',
-				'title' => __( 'Povly', 'povly-block' ),
-				'icon'  => null,
-			)
-		);
-	}
-	return $block_categories;
-}
-
-add_filter( 'block_categories_all', 'filter_block_categories_when_post_provided', 10, 2 );
-
 
