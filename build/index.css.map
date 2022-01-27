@@ -1,1 +1,1 @@
-{"version":3,"file":"index.css","mappings":";;;AAAA;EACE;EACA;AACF,C","sources":["webpack://todo-list/./src/blocks/povly-block/editor.scss"],"sourcesContent":[".wp-block-povly-block-test-block {\n  color: #000;\n  padding: 2px;\n}\n"],"names":[],"sourceRoot":""}
+{"version":3,"file":"index.css","mappings":";;;AAAA;EACE;EACA;AACF,C","sources":["webpack://povly-block/./src/blocks/povly-block/editor.scss"],"sourcesContent":[".wp-block-povly-block-test-block {\r\n  color: #000;\r\n  padding: 2px;\r\n}\r\n"],"names":[],"sourceRoot":""}
