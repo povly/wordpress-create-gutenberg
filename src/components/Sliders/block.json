@@ -1,0 +1,14 @@
+{
+  "name": "povly-block/sliders",
+  "title": "Sliders block",
+  "category": "povly",
+  "icon": "smiley",
+  "description": "Мой первый слайдер!",
+  "supports": {
+    "html": false
+  },
+  "textdomain": "povly-block",
+  "editorScript": "file:./build/index.js",
+  "editorStyle": "file:./build/index.css",
+  "style": "file:./build/style-index.css"
+}

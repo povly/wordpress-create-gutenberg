@@ -7,17 +7,19 @@ import apiFetch from '@wordpress/api-fetch';
 
 const PovlySelectPosts = (props) => {
     const [posts, setPosts] = useState([]);
-    const [selectedPost, setSelectedPost] = useState(0);
+    let [selectedPost, setSelectedPost] = useState(0);
     const [post, setPost] = useState({});
 
-    useEffect(()=>{
-        getOptions();
+    useEffect(() => {
+        return getOptions();
     }, [])
 
-    const getOptions = ()=>{
-        return apiFetch({path: '/wp/v2/posts'}).then((data)=> {
-            if (data && 0 != selectedPost){
-                const post = data.find((item)=>{return item.id == selectedPost});
+    const getOptions = () => {
+        return apiFetch({path: '/wp/v2/posts'}).then((data) => {
+            if (data && 0 !== selectedPost) {
+                const post = data.find((item) => {
+                    return item.id === selectedPost
+                });
                 setPost(post);
                 setPosts(data);
             } else {
@@ -26,10 +28,12 @@ const PovlySelectPosts = (props) => {
         })
     }
 
-    const onChangeSelectPost = (value) =>{
+    const onChangeSelectPost = (value) => {
         const selectValue = parseInt(value);
-        const post = posts.find((item)=> {return item.id == selectValue});
-        if (post){
+        const post = posts.find((item) => {
+            return item.id == selectValue
+        });
+        if (post) {
             setSelectedPost(selectValue);
             setPost(post);
             props.setAttributes({
@@ -39,7 +43,7 @@ const PovlySelectPosts = (props) => {
                 link: post.link,
             });
         } else {
-            setSelectedPost(selectValue);
+            setSelectedPost(0);
             setPost({});
             props.setAttributes({
                 selectedPost: 0,
@@ -57,17 +61,18 @@ const PovlySelectPosts = (props) => {
         }
     ];
     let output = __('Loading Posts');
-    props.className += ' loading';
-    if (posts.length > 0){
+
+    if (posts.length > 0) {
         const loading = __('We have %d posts. Choose one.');
         output = loading.replace('%d', posts.length);
-        posts.forEach((post)=>{
-            options.push({value: post.id, label:post.title.rendered});
+        posts.forEach((post) => {
+            options.push({value: post.id, label: post.title.rendered});
         });
     } else {
-        output = __( 'No posts found. Please create some first.' );
+        output = __('No posts found. Please create some first.');
     }
-    if (post.hasOwnProperty('title')){
+
+    if (Object.getOwnPropertyNames(post).length !== 0) {
         output = <div className="post">
             <a href={post.link}>
                 <h2 dangerouslySetInnerHTML={{__html: post.title.rendered}}></h2>
