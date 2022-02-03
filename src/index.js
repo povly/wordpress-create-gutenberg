@@ -4,6 +4,7 @@
  * @see https://developer.wordpress.org/block-editor/reference-guides/block-api/block-registration/
  */
 import {registerBlockType} from '@wordpress/blocks';
+import {RichText} from "@wordpress/block-editor";
 
 /**
  * Lets webpack process CSS, SASS or SCSS files referenced in JavaScript files.
@@ -30,24 +31,24 @@ registerBlockType(povlyBlockMetadata, {
 import postBlockMetadata from "./components/PovlySelectPosts/post-block.json";
 import PovlySelectPosts from "./components/PovlySelectPosts/PovlySelectPosts";
 
-registerBlockType(postBlockMetadata, {
-    edit: function (props) {
-        return (
-            <PovlySelectPosts {...props}/>
-        )
-    },
-    save: function (props) {
-        return (
-            <div className={props.className}>
-                <div className="post">
-                    <a href={props.attributes.link}><h2 dangerouslySetInnerHTML={{__html: props.attributes.title}}></h2>
-                    </a>
-                    <div dangerouslySetInnerHTML={{__html: props.attributes.content}}></div>
-                </div>
-            </div>
-        );
-    }
-});
+// registerBlockType(postBlockMetadata, {
+//     edit: function (props) {
+//         return (
+//             <PovlySelectPosts {...props}/>
+//         )
+//     },
+//     save: function (props) {
+//         return (
+//             <div className={props.className}>
+//                 <div className="post">
+//                     <a href={props.attributes.link}><h2 dangerouslySetInnerHTML={{__html: props.attributes.title}}></h2>
+//                     </a>
+//                     <div dangerouslySetInnerHTML={{__html: props.attributes.content}}></div>
+//                 </div>
+//             </div>
+//         );
+//     }
+// });
 
 import slidersBlockData from "./components/Sliders/block.json";
 import Sliders from "./components/Sliders/Sliders";
@@ -60,9 +61,21 @@ registerBlockType(slidersBlockData, {
         )
     },
     save: function (props) {
+        console.log(props.attributes.slides);
         return (
             <div className={props.className}>
-                Sliders
+                <div className="swiper">
+                    <div className="swiper-wrapper">
+                        {props.attributes.slides.map((slide) => {
+                            return <div className="swiper-slide">
+                                <RichText.Content tagName="h2" value={slide.text}/>
+                            </div>
+                        })}
+
+                    </div>
+                    <div className="swiper-button-prev">налево</div>
+                    <div className="swiper-button-next">направо</div>
+                </div>
             </div>
         );
     },
