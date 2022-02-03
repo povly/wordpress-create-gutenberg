@@ -2,11 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="27fe97d0-e58b-4d21-ae7b-c33f48ecf62b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/Sliders/Sliders.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Sliders/block.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/povluSelectPosts/PovlySelectPosts.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PovlySelectPosts/PovlySelectPosts.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/povluSelectPosts/post-block.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PovlySelectPosts/post-block.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/PovlySelectPosts/PovlySelectPosts.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PovlySelectPosts/PovlySelectPosts.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/PovlySelectPosts/post-block.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PovlySelectPosts/post-block.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -83,6 +81,7 @@
       <workItem from="1643807609936" duration="396000" />
       <workItem from="1643808014750" duration="359000" />
       <workItem from="1643808383955" duration="5786000" />
+      <workItem from="1643870726520" duration="7370000" />
     </task>
     <servers />
   </component>

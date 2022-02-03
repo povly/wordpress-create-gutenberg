@@ -11,7 +11,7 @@
 	"content": {
 	  "type": "array",
 	  "source": "children",
-	  "selector": "p"
+	  "selector": "div"
 	},
 	"title": {
 	  "type": "string",
@@ -20,7 +20,6 @@
 	},
 	"link": {
 	  "type": "string",
-	  "source": "html",
 	  "selector": "a"
 	},
 	"selectedPost": {

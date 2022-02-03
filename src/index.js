@@ -36,12 +36,13 @@ registerBlockType(postBlockMetadata, {
             <PovlySelectPosts {...props}/>
         )
     },
-    save: function( props ) {
+    save: function (props) {
         return (
-            <div className={ props.className }>
+            <div className={props.className}>
                 <div className="post">
-                    <a href={ props.attributes.link }><h2 dangerouslySetInnerHTML={ { __html: props.attributes.title } }></h2></a>
-                    <p dangerouslySetInnerHTML={ { __html: props.attributes.content } }></p>
+                    <a href={props.attributes.link}><h2 dangerouslySetInnerHTML={{__html: props.attributes.title}}></h2>
+                    </a>
+                    <div dangerouslySetInnerHTML={{__html: props.attributes.content}}></div>
                 </div>
             </div>
         );
